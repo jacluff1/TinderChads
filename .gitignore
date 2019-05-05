@@ -1,0 +1,9 @@
+# ignore file types
+**.csv
+**.jpg
+
+# ignore files
+
+# ignore folders
+__pycache__/
+.ipynb_checkpoints/
