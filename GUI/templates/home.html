@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Data Collection</title>
+    </head>
+    <body>
+        {% extends "template.html" %}
+        {% block content %}
+        <h1> Thank You for Helping Us Collect Data! </h1>
+        <p> Please click <a href="{{ url_for('instructions') }}">here</a> for instructions; please click <a href="{{ url_for('collect') }}">here</a> to begin swiping</p>
+        {% endblock %}
+    </body>
+</html>
