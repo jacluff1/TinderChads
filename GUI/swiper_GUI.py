@@ -16,6 +16,7 @@ class GUI:
 
     def __init__(self, **kwargs):
         self.finished = False
+        if not os.path.isdir("user_data"): os.mkdir("user_data")
         self._set_options_and_handle_opening_sequence(**kwargs)
         self._run_batch()
 
@@ -68,6 +69,9 @@ class GUI:
 
             # save the beginning index
             self.i = 0
+
+            # save an empty DataFrame
+            pd.DataFrame(columns=['id', 'swipe']).to_csv(self.filename, index=False)
 
             # set the DataFrame for the batch
             self.DF = pd.DataFrame(
